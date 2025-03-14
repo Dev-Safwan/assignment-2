@@ -1,0 +1,575 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+}
+
+/* Common css start */
+
+a {
+    position: relative;
+    text-decoration: none;
+    color: #000; /* Change color as needed */
+  }
+  
+  a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px; /* Adjust distance from text */
+    width: 100%;
+    height: 2px; /* Adjust thickness */
+    background-color: #000; /* Change underline color */
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  a:hover::after {
+    transform: scaleX(1);
+  }
+  
+
+/* Common css end */
+
+/* Home section css */
+
+.home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(0deg, rgba(0, 52, 101, 0.72) 0%, rgba(0, 0, 0, 0) 100%), url('image/image.png') no-repeat center center/cover;
+    height: 100vh;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+header {
+    width: 1194;
+    height: 80;
+    top: 40px;
+    left: 120px;
+    border-radius: 18px;
+    padding-top: 19px 49px;
+    gap: 84px;
+    background: #FFFFFF;
+    position: fixed;
+    z-index: 1000;
+
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+header nav ul li a {
+    font-size: 24px;
+    margin: 40px;
+}
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+}
+
+.hero h1 {
+    margin-top: 250px;
+    font-size: 64px;
+    color: #fff;
+    font-weight: 700;
+    text-align: left;
+    margin-left: 120px;
+}
+
+.hero .slide-dot {
+    position: absolute;
+    bottom: 20px;
+    left: 48%;
+}
+
+/* Booking section css */
+
+.booking-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: fit-content;
+    background-color: #f8fcff;
+    margin: 0;
+}
+
+.booking-section {
+    background: #E9F3F6;
+    padding: 50px;
+    border-radius: 42px;
+    text-align: center;
+    width: 80%;
+    height: 320px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.booking-section h2 {
+    font-size: 32px;
+    font-weight: 500;
+}
+
+.booking-section p {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.booking-container {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+
+.booking-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.booking-item label {
+    font-size: 16px;
+    font-weight: 500;
+    text-align: left;
+}
+
+.check-available {
+    background: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 12px;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    height: 60px;
+    width: 265px;
+    justify-content: center;
+}
+
+.person-select {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    height: 60px;
+    width: 433px;
+    border-radius: 12px;
+}
+
+select {
+    padding: 20px;
+    border: none;
+}
+
+.book-now {
+    width: 201;
+    height: 59;
+    gap: 8px;
+    border-radius: 12px;
+    padding: 15px 32px;
+    background-color: #65AEF2;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    font-weight: 700;
+    transition: background-color 0.3s ease;
+
+}
+
+.book-now:hover {
+    background-color: #5cf2e5;
+}
+
+/* Services section css */
+
+.hotel-services {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto auto;
+    gap: 15px;
+    padding: 20px;
+    width: 100%;
+    margin: auto;
+    background-color: #F3F3F3;
+}
+
+.service-item {
+    position: relative;
+    border-radius: 42px;
+    overflow: hidden;
+    margin-bottom: 15px; /* Added margin bottom */
+    width: 400px;
+}
+
+.service-item img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    display: block;
+    border-radius: 12px;
+}
+
+.large {
+    grid-row: span 2;  /* Makes the "Rooms" image larger */
+    height: 100%;
+}
+
+.large img {
+    height: 100%; /* Ensure the image fills the large container */
+}
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0)); /* Gradient effect */
+    color: white;
+    text-align: center;
+    font-size: 36px;
+    padding: 20px;
+    padding-bottom: 40px;
+    font-weight: bold;
+    border-radius: 0 0 12px 12px;
+}
+
+/* Offer section css */
+
+.offer-head {
+    display: flex;
+    justify-content: space-between;
+}
+
+.offer-headtext {
+    width: 60%;
+}
+
+.vewall {
+    width: 40%;
+    text-align: left;
+}
+
+
+.special-offers {
+    padding: 40px;
+}
+.offer-title {
+    color: #65AEF2;
+    font-size: 32px;
+    font-weight: 500;
+}
+.offer-heading {
+    font-size: 64px;
+    margin: 10px 0;
+    font-weight: 500;
+}
+.offer-description {
+    font-size: 24px;
+    color: #1E1E1E;
+    margin: 20px 0;
+    font-weight: 400;
+}
+.view-all {
+    color: #65AEF2;
+    font-size: 32px;
+    font-weight: 700;
+    text-decoration: none;
+    font-weight: bold;
+}
+.offer-cards {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.card {
+    background: white;
+    border-radius: 42px;
+    box-shadow: 0px 4px 60px 0px #00346540;
+    overflow: hidden;
+    text-align: left;
+    width: 400px;
+    height: 547px;
+    padding: 20px;
+    transition: transform 0.3s ease;
+}
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card img {
+    width: 360px;
+    height: 280px;
+    object-fit: cover;
+}
+.card-content {
+    padding: 15px;
+}
+
+.card-content .type {
+    font-size: 12px;
+    font-weight: 700;
+    color: #5E5E5E;
+}
+.card-content h4 {
+    margin: 10px 0;
+    font-size: 24px;
+    font-weight: 700;
+    color: #1E1E1E;
+}
+
+.card-content p {
+    font-size: 12px;
+    color: #5E5E5E;
+}
+.price {
+    font-weight: 700;
+    color: #1E1E1E;
+    font-size: 36px;
+    margin-top: 40px;
+    position: absolute;
+}
+
+.price .space {
+    font-weight: 400;
+    font-size: 16px;
+    color: #1E1E1E;
+}
+
+/* Footer css */
+.footer-body {
+    background-color: #1a1a1a;
+    color: white;
+    height: 550px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.footer-section {
+    background-color: #1a1a1a;
+    padding: 40px;
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.newsletter {
+    margin-bottom: 30px;
+}
+.newsletter input {
+    width: 430px;
+    height: 80px;
+    padding: 10px;
+    border: none;
+    border-radius: 12px 0 0 12px;
+    outline: none;
+    font-weight: 500;
+    font-style: italic;
+    font-size: 24px;
+
+}
+.newsletter .submit {
+    padding: 10px 20px;
+    border: none;
+    background-color: #5da9f9;
+    color: white;
+    font-size: 24px;
+    font-weight: 700;
+    border-radius: 0 12px 12px 0;
+    cursor: pointer;
+    height: 80px;
+    width: 170px;
+    transition: background 0.3s ease-in-out;
+}
+
+.newsletter button:hover {
+    background: #5cf2e5;
+}
+
+.newsletter h2 {
+    font-size: 36px;
+    font-weight: 500;
+    margin-bottom: 50px;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-top: 20px;
+}
+.footer-links div {
+    display: flex;
+    flex-direction: column;
+}
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    margin: 5px 0;
+    font-size: 16px;
+    text-align: left;
+}
+.footer-links a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px; /* Adjust distance from text */
+    width: 100%;
+    height: 2px; /* Adjust thickness */
+    background-color: #ffffff; /* Change underline color */
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease-in;
+  }
+  
+.footer-links a:hover::after {
+    transform: scaleX(1);
+}
+
+/* Copy-right section css */
+
+.copyright {
+    width: 100%;
+    background-color: #1a1a1a;
+    padding: 20px;
+    text-align: center;
+    color: white;
+    border-top: 1px solid #434343;
+}
+
+footer{
+    position: relative;
+    bottom: 0;
+    color: #fff;
+}
+
+@media only screen and (max-width: 1200px) {
+    header{
+        width: 80%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .nav-link {
+        visibility: hidden;
+    }
+
+    .booking-body, .booking-section {
+        height: fit-content;
+    }
+
+    .booking-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .book-now{
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .hotel-services {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .offer-head{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .footer-section{
+        grid-template-columns: 1fr;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    
+    header{
+        width: 80%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        left: 10%;
+        right: 10%;
+        position: absolute;
+    }
+
+    .hero h1{
+        font-size: 36px;
+        right: 30px;
+        bottom: 120px;
+        position: absolute;        
+    }
+
+    .person-select {
+        width: 100%;
+        padding: 0 10px;
+    }
+
+    select {
+        padding: 5px;
+    }
+
+    .newsletter {
+        font-size: 16px;
+    }
+
+    .newsletter input {
+        border-radius: 20px;
+        width: 80%;
+    }
+
+    .newsletter .submit {
+        border-radius: 20px;
+        margin-top: 5px;
+        width: 80%;
+    }
+
+    .service-item{
+        width: 80%;
+        margin-bottom: 20px;
+    }
+
+    .special-offers{
+        height: 2500px;
+        padding: 20px;
+    }
+
+    .card img{
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 42px;
+    }
+
+    .copyright{
+        padding-top: 50px;
+    }
+}
